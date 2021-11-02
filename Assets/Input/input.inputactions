@@ -99,6 +99,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "770ea7da-e619-4b06-b3d1-e47577169d2a",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "WS",
                     "id": "47354496-de6d-4cc2-875a-8e72d05361fb",
                     "path": "1DAxis",
