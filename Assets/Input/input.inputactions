@@ -6,7 +6,7 @@
             "id": "7e4e7895-ca01-4346-a1f4-7e62cec6434e",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "HorizontalMovement",
                     "type": "Value",
                     "id": "3982c078-7ae4-4b1f-bf62-8153b954b29a",
                     "expectedControlType": "Axis",
@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "VerticalMovement",
+                    "type": "Value",
+                    "id": "7b85a53f-e968-4b7f-9e5a-ea8569f3dbc8",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -41,7 +50,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "HorizontalMovement",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -52,7 +61,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "HorizontalMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -63,7 +72,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "HorizontalMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -88,6 +97,39 @@
                     "action": "Action",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "WS",
+                    "id": "47354496-de6d-4cc2-875a-8e72d05361fb",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalMovement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "cc2aae49-0ffd-4e08-a5a8-3b7b9808785a",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "3eaf4ea2-46e4-4757-b24a-5cb1d2b695d1",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
