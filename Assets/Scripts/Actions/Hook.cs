@@ -15,9 +15,9 @@ public class Hook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hook = GetComponent<DistanceJoint2D>();
+        hook = GetComponentInParent<DistanceJoint2D>();
         lineRenderer = GetComponent<LineRenderer>();
-        movement = GetComponent<HorizontalMovement>();
+        movement = GetComponentInParent<HorizontalMovement>();
         baseAcceleration = movement.acceleration;
     }
 
@@ -59,16 +59,16 @@ public class Hook : MonoBehaviour
         UpdateLineRenderer();
     }
 
-    void StopHook()
-    {
-        movement.acceleration = baseAcceleration;
-        hook.enabled = false;
-        lineRenderer.enabled = false;
-    }
-
     void UpdateLineRenderer()
     {
         lineRenderer.SetPosition(0, hook.connectedBody.transform.position);
         lineRenderer.SetPosition(1, transform.position);
+    }
+
+    public void StopHook()
+    {
+        movement.acceleration = baseAcceleration;
+        hook.enabled = false;
+        lineRenderer.enabled = false;
     }
 }

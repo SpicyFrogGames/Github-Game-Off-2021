@@ -17,7 +17,7 @@ public class WoodlouseTransformation : MonoBehaviour
     
     void Start()
     {
-        movement = GetComponent<HorizontalMovement>();
+        movement = GetComponentInParent<HorizontalMovement>();
     }
 
     void OnAction(InputValue value)

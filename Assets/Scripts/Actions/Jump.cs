@@ -13,7 +13,7 @@ public class Jump : MonoBehaviour
 
     void Start()
     {
-        body2D = GetComponent<Rigidbody2D>();
+        body2D = GetComponentInParent<Rigidbody2D>();
     }
 
     void OnJump(InputValue value)

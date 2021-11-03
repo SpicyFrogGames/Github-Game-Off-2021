@@ -15,7 +15,7 @@ public class Wallclimb : MonoBehaviour
 
     void Start()
     {
-        body2D = GetComponent<Rigidbody2D>();
+        body2D = GetComponentInParent<Rigidbody2D>();
         gravityScale = body2D.gravityScale;
     }
 
