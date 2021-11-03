@@ -7,7 +7,6 @@ public class HorizontalMovement : MonoBehaviour
 {
     public float maximumSpeed = 7f;
     public float acceleration = 1f;
-    public bool canMove = true;
     public float direction { get; private set; } = 0f;
 
     private Rigidbody2D body2D;
@@ -19,14 +18,11 @@ public class HorizontalMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (canMove)
-        {
-            body2D.velocity =
-                new Vector2(
-                    Mathf.MoveTowards(body2D.velocity.x, maximumSpeed * direction, acceleration * Time.fixedDeltaTime),
-                    body2D.velocity.y
-                    );
-        }
+        body2D.velocity =
+            new Vector2(
+                Mathf.MoveTowards(body2D.velocity.x, maximumSpeed * direction, acceleration * Time.fixedDeltaTime),
+                body2D.velocity.y
+                );
     }
 
     private void OnHorizontalMovement(InputValue value)
