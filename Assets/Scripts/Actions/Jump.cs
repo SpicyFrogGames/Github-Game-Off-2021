@@ -18,13 +18,16 @@ public class Jump : MonoBehaviour
 
     void OnJump(InputValue value)
     {
-        if (value.Get<float>() == 1f)
+        if (enabled)
         {
-            DoJump();
-        }
-        else
-        {
-            StopJump();
+            if (value.Get<float>() == 1f)
+            {
+                DoJump();
+            }
+            else
+            {
+                StopJump();
+            }
         }
     }
 
