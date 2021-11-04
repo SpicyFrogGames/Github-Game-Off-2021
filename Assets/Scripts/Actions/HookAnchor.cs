@@ -7,19 +7,22 @@ public class HookAnchor : MonoBehaviour
 {
     public GameObject launcher;
 
-    private Rigidbody2D body2D;
+    private FixedJoint2D joint;
     private void Start()
     {
-        body2D = GetComponent<Rigidbody2D>();
+        joint = GetComponent<FixedJoint2D>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        other.gameObject.SendMessage("OnHookHit", gameObject, SendMessageOptions.DontRequireReceiver);
-        if (other.gameObject.layer == LayerMask.NameToLayer("Solid"))
+        Rigidbody2D targetBody = other.gameObject.GetComponent<Rigidbody2D>();
+        if (targetBody != null)
         {
-            body2D.bodyType = RigidbodyType2D.Static;
-            launcher.SendMessage("OnHookAnchored", gameObject, SendMessageOptions.DontRequireReceiver);
+            joint.connectedBody = targetBody;
+            joint.enabled = true;
+            AnchorData data = new AnchorData(gameObject, other.gameObject);
+            other.gameObject.SendMessage("OnHookHit", data, SendMessageOptions.DontRequireReceiver);
+            launcher.SendMessage("OnHookHit", data, SendMessageOptions.DontRequireReceiver);
         }
     }
 }

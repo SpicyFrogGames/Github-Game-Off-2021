@@ -119,6 +119,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "f419ce5e-94af-4df2-a039-a924afe4befd",
+                    "path": "<Mouse>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "WS",
                     "id": "47354496-de6d-4cc2-875a-8e72d05361fb",
                     "path": "1DAxis",

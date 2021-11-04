@@ -7,7 +7,7 @@ public class HorizontalMovement : MonoBehaviour
 {
     public float maximumSpeed = 7f;
     public float acceleration = 1f;
-    public float direction { get; private set; } = 0f;
+    public float direction = 0f;
 
     private Rigidbody2D body2D;
 

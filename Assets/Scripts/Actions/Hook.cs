@@ -55,27 +55,29 @@ public class Hook : MonoBehaviour
         currentAnchor.GetComponent<Rigidbody2D>().velocity = new Vector2(1 * movement.direction, 1) * hookThrowForce;
     }
 
-    void OnHookAnchored(GameObject anchoredHook)
+    void OnHookHit(AnchorData data)
     {
-        if (anchoredHook == currentAnchor)
+        if (data.target.layer == LayerMask.NameToLayer("Solid"))
         {
-            StartHook();
-        }
-        else
-        {
-            Destroy(anchoredHook);
+            if (data.anchor == currentAnchor)
+            {
+                StartHook();
+                data.anchor.transform.parent = data.target.transform;
+                data.target.SendMessage("OnHookAnchored", data, SendMessageOptions.DontRequireReceiver);
+            }
+            else
+            {
+                Destroy(data.anchor);
+            }
         }
     }
 
     void StartHook()
     {
-        if (currentAnchor != null)
-        {
-            hook.connectedBody = currentAnchor.GetComponent<Rigidbody2D>();
-            movement.acceleration = hookAcceleration;
-            hook.enabled = true;
-            UpdateLineRenderer();
-        }
+        hook.connectedBody = currentAnchor.GetComponent<Rigidbody2D>();
+        movement.acceleration = hookAcceleration;
+        hook.enabled = true;
+        UpdateLineRenderer();
     }
 
     void UpdateLineRenderer()

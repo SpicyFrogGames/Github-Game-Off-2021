@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximumHookDistance: 6
   hookAcceleration: 3
-  hookThrowForce: 5
+  hookThrowForce: 15
   anchor: {fileID: 8720735694330576767, guid: 8ef661e707b292a4ebc5a35a976a26ad, type: 3}
 --- !u!120 &7202432513286964415
 LineRenderer:
