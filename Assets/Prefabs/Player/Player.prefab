@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 8342474858369728718}
   - component: {fileID: 8342474858369728719}
   - component: {fileID: 8342474858369728712}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,6 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximumSpeed: 7
   acceleration: 70
+  direction: 0
 --- !u!114 &8342474858369728704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +244,10 @@ PrefabInstance:
       value: DummySpider
       objectReference: {fileID: 0}
     - target: {fileID: 7202432513286964400, guid: cbfcfcb805367b740a793d6f853e7988, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202432513286964400, guid: cbfcfcb805367b740a793d6f853e7988, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -297,6 +302,10 @@ PrefabInstance:
     - target: {fileID: 7202432513286964415, guid: cbfcfcb805367b740a793d6f853e7988, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202432513498085296, guid: cbfcfcb805367b740a793d6f853e7988, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7202432513286964409, guid: cbfcfcb805367b740a793d6f853e7988, type: 3}
@@ -362,8 +371,16 @@ PrefabInstance:
       value: DummyAnt
       objectReference: {fileID: 0}
     - target: {fileID: 3708072678842005732, guid: 5c75c7a85411ff24199d19c80a84fbd3, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708072678842005732, guid: 5c75c7a85411ff24199d19c80a84fbd3, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708072678901550052, guid: 5c75c7a85411ff24199d19c80a84fbd3, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c75c7a85411ff24199d19c80a84fbd3, type: 3}
@@ -379,9 +396,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8342474858369728707}
     m_Modifications:
+    - target: {fileID: 1871966858691759684, guid: 546407e62303ee84e98ac0c6efbd0bd6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871966860351828937, guid: 546407e62303ee84e98ac0c6efbd0bd6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391134826575930168, guid: 546407e62303ee84e98ac0c6efbd0bd6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3431871767785039816, guid: 546407e62303ee84e98ac0c6efbd0bd6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3431871767985231048, guid: 546407e62303ee84e98ac0c6efbd0bd6, type: 3}
       propertyPath: m_Name
       value: DummyWoodlouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3431871767985231048, guid: 546407e62303ee84e98ac0c6efbd0bd6, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3431871767985231048, guid: 546407e62303ee84e98ac0c6efbd0bd6, type: 3}
       propertyPath: m_IsActive
