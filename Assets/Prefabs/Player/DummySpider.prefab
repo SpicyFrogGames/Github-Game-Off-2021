@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3215abd884a150b46b86a324c12bbeb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximumHookDistance: 6
+  maximumHookDistance: 5
   hookAcceleration: 3
   hookThrowForce: 15
   anchor: {fileID: 8720735694330576767, guid: 8ef661e707b292a4ebc5a35a976a26ad, type: 3}
