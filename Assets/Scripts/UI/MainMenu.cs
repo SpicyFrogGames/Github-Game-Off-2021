@@ -35,4 +35,9 @@ public class MainMenu : MonoBehaviour
         creditsPanel.DOLocalMoveX(1000, 0.5f);
         mainMenu.DOLocalMoveX(0, 0.5f);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
