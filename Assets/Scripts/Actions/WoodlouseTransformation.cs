@@ -5,14 +5,14 @@ using UnityEngine.InputSystem;
 
 public class WoodlouseTransformation : MonoBehaviour
 {
-    public GameObject normalForm;
-    public GameObject ballForm;
     public float ballSpeed;
     public float ballAcceleration;
+    public Collider2D normalCollider;
+    public Collider2D ballCollider;
+    public bool isBall { get; private set; } = false;
 
     private HorizontalMovement movement;
     private Jump jump;
-    private bool isBall = false;
     private float normalSpeed;
     private float normalAcceleration;
     
@@ -31,22 +31,24 @@ public class WoodlouseTransformation : MonoBehaviour
             if (isBall)
             {
                 // Transforms to normal
-                normalForm.SetActive(true);
-                ballForm.SetActive(false);
                 isBall = false;
                 movement.maximumSpeed = normalSpeed;
                 movement.acceleration = normalAcceleration;
+                normalCollider.enabled = true;
+                ballCollider.enabled = false;
                 jump.enabled = true;
+                BroadcastMessage("OnUnroll", SendMessageOptions.DontRequireReceiver);
             }
             else
             {
                 // Transforms to ball
-                normalForm.SetActive(false);
-                ballForm.SetActive(true);
                 isBall = true;
                 movement.maximumSpeed = ballSpeed;
                 movement.acceleration = ballAcceleration;
+                normalCollider.enabled = false;
+                ballCollider.enabled = true;
                 jump.enabled = false;
+                BroadcastMessage("OnRoll", SendMessageOptions.DontRequireReceiver);
             }
         }
     }

@@ -10,7 +10,7 @@ public class Hitbox : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // It's strange, but it seems to be how you chek if a layer is in a LayerMask
+        // It's strange, but it seems to be how you check if a layer is in a LayerMask
         if (((1 << other.gameObject.layer) & hittable) != 0)
         {
             other.gameObject.BroadcastMessage("OnHit", this, SendMessageOptions.DontRequireReceiver);

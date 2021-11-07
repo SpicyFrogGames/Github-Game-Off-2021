@@ -28,5 +28,15 @@ public class HorizontalMovement : MonoBehaviour
     private void OnHorizontalMovement(InputValue value)
     {
         direction = value.Get<float>();
+
+        if (direction < 0)
+        {
+            BroadcastMessage("OnGoingLeft", SendMessageOptions.DontRequireReceiver);
+        }
+        
+        if (direction > 0)
+        {
+            BroadcastMessage("OnGoingRight", SendMessageOptions.DontRequireReceiver);
+        }
     }
 }
